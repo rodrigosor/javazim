@@ -1,4 +1,4 @@
-#### Centro Universitário de Belo Horizonte – Uni-BH <br /> Departamento de Ciências Exatas e Tecnologia <br /> Curso: Ciência da Computação <br /> Professor: Thiago Moraes Martins
+#### Centro Universitário de Belo Horizonte – Uni-BH <br /> Departamento de Ciências Exatas e Tecnologia <br /> Curso: Ciência da Computação <br /> Professor: Thiago Moraes Martins <br/> Alunos: Rodrigo Reis e Wendell Ronald
 
 ## Trabalho Prático I – Análise Léxica
 
