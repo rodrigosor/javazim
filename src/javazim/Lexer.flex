@@ -6,7 +6,7 @@ import static javazim.Token.*;
 %class Lexer
 %type Token
 
-ESPACO =\s+
+ESPACO =[ ]
 BRANCO = [ESPACO\t\r]
 NOVA_LINHA = [\n]
 LETRA = [a-zA-Z]
@@ -18,7 +18,7 @@ CONST_REAL = {CONST_INTEIRA}"."{CONST_INTEIRA}
 CONST_STRING = \"([^\\\"]|\\.)*\"
 TIPO_PRIMITIVO = "boolean" | "int" | "String" | "float" | "void"
 TIPO = {TIPO_PRIMITIVO}"[""]"|{TIPO_PRIMITIVO}
-PARAM = {TIPO}{ESPACO}{ID}
+PARAM = {TIPO}{ESPACO}+{ID}
 LISTA_PARAM = {PARAM}([, ]*{PARAM})*|{PARAM}
 DECLARACAO_VAR = {PARAM}({ESPACO}*";")|";"
 OP = "||" | "&&" | "<" | "<=" | ">" | ">=" | "==" | "!=" | "/" | "*" | "-" | "+"
@@ -30,6 +30,7 @@ public String lexema;
 
 %%
 {BRANCO}                                                                        {/* ignora espaço em branco, tabulação e quebra de linha*/}
+{ESPACO}                                                                        {/* ignora espaço em branco, tabulação e quebra de linha*/}
 {NOVA_LINHA}                                                                    {lexema=yytext(); return NovaLinha;}
 {ID}                                                                            {lexema=yytext(); return ID;}
 {CONST_INTEIRA}                                                                 {lexema=yytext(); return ConstInteira;}
