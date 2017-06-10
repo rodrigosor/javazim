@@ -30,7 +30,7 @@ Para avaliar a correção, o programa deverá exibir os tokens reconhecidos e o 
 
 ### A linguagem Javazim
 
-Programa → Classe <EOF>
+Programa → Classe [EOF]
 
 Classe → "public" "class" [ID] "{" ListaMetodo Main "}"
 
