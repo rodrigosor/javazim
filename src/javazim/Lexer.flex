@@ -22,7 +22,7 @@ PARAM = {TIPO}{ESPACO}{ID}
 LISTA_PARAM = {PARAM}([, ]*{PARAM})*|{PARAM}
 DECLARACAO_VAR = {PARAM}({ESPACO}*";")|";"
 OP = "||" | "&&" | "<" | "<=" | ">" | ">=" | "==" | "!=" | "/" | "*" | "-" | "+"
-OP_UNARIO = "-" | "!"
+OP_UNARIO = "-" | "!" 
 
 %{
 public String lexema;
