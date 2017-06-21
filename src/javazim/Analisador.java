@@ -146,8 +146,7 @@ public class Analisador extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -181,28 +180,22 @@ public class Analisador extends javax.swing.JFrame
         txtSaida.getAccessibleContext().setAccessibleName("");
 
         btnAnalisar.setText("Analisar");
-        btnAnalisar.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnAnalisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAnalisarActionPerformed(evt);
             }
         });
 
         btnCopiarSaida.setText("Copiar Saída");
-        btnCopiarSaida.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnCopiarSaida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCopiarSaidaActionPerformed(evt);
             }
         });
 
         btnNovaAnalise.setText("Nova Análise");
-        btnNovaAnalise.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnNovaAnalise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNovaAnaliseActionPerformed(evt);
             }
         });
@@ -238,8 +231,8 @@ public class Analisador extends javax.swing.JFrame
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCopiarSaida)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnCopiarSaida)
                         .addComponent(btnAnalisar)
                         .addComponent(btnNovaAnalise))
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -311,9 +304,10 @@ public class Analisador extends javax.swing.JFrame
         }
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() ->
-        {
-            new Analisador().setVisible(true);
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Analisador().setVisible(true);
+            }
         });
     }
 

@@ -32,7 +32,6 @@ public String lexema;
 {BRANCO}                                                                        {/* ignora espaço em branco, tabulação e quebra de linha*/}
 {ESPACO}                                                                        {/* ignora espaço em branco, tabulação e quebra de linha*/}
 {NOVA_LINHA}                                                                    {lexema=yytext(); return NovaLinha;}
-{ID}                                                                            {lexema=yytext(); return ID;}
 {CONST_INTEIRA}                                                                 {lexema=yytext(); return ConstInteira;}
 {CONST_REAL}                                                                    {lexema=yytext(); return ConstReal;}
 {CONST_STRING}                                                                  {lexema=yytext(); return ConstString;}
@@ -41,4 +40,5 @@ public String lexema;
 {TIPO}                                                                          {lexema=yytext(); return Tipo;}
 {LISTA_PARAM}                                                                   {lexema=yytext(); return ListaParam;}
 {DECLARACAO_VAR}                                                                {lexema=yytext(); return DeclaracaoVar;}
+{ID}                                                                            {lexema=yytext(); return ID;}
 .                                                                               {lexema=yytext(); return NaoReconhecido;}
