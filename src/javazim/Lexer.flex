@@ -12,19 +12,17 @@ NOVA_LINHA = [\n]
 LETRA = [a-zA-Z]
 DIGITO = [0-9]
 SUBLINHADO = [_]
+DELIMITADOR = ";"
 ID = {LETRA}({LETRA}|{DIGITO}|{SUBLINHADO})*
 CONST_INTEIRA = {DIGITO}+
 CONST_REAL = {CONST_INTEIRA}"."{CONST_INTEIRA}
 CONST_STRING = \"([^\\\"]|\\.)*\"
 TIPO_PRIMITIVO = "boolean" | "int" | "String" | "float" | "void"
 TIPO = {TIPO_PRIMITIVO}"[""]"|{TIPO_PRIMITIVO}
-PARAM = {TIPO}{ESPACO}+{ID}
-LISTA_PARAM = {PARAM}([, ]*{PARAM})*|{PARAM}
-DECLARACAO_VAR = {PARAM}({ESPACO}*";")
 OP = "||" | "&&" | "<" | "<=" | ">" | ">=" | "==" | "!=" | "/" | "*" | "-" | "+"
 OP_UNARIO = "-" | "!"
-PALAVRA_RESERVADA = "public" | "class" | "return" | "static" | "void" | "main" | "if" | "else" | "while" | "print" | "println" | "true" | "false" | "new"
-DELIMITADOR = ";"
+ATRIBUICAO = "="
+PALAVRA_RESERVADA = "public" | "class" | "return" | "static" | "main" | "if" | "else" | "while" | "print" | "println" | "true" | "false" | "new"
 SIMBOLO_AGRUPADOR = "(" | ")" | "[" | "]" | "{" | "}"
 
 %{
@@ -40,9 +38,8 @@ public String lexema;
 {CONST_STRING}                                                                  {lexema=yytext(); return ConstString;}
 {OP}                                                                            {lexema=yytext(); return Op;}
 {OP_UNARIO}                                                                     {lexema=yytext(); return OpUnario;}
+{ATRIBUICAO}                                                                    {lexema=yytext(); return Atribuicao;}
 {TIPO}                                                                          {lexema=yytext(); return Tipo;}
-{LISTA_PARAM}                                                                   {lexema=yytext(); return ListaParam;}
-{DECLARACAO_VAR}                                                                {lexema=yytext(); return DeclaracaoVar;}
 {DELIMITADOR}                                                                   {lexema=yytext(); return Delimitador;}
 {SIMBOLO_AGRUPADOR}                                                             {lexema=yytext(); return SimboloAgrupador;}
 {PALAVRA_RESERVADA}                                                             {lexema=yytext(); return PalavraReservada;}
