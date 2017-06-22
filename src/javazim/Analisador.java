@@ -117,6 +117,22 @@ public class Analisador extends javax.swing.JFrame
                 case ConstString:
                     resultado = resultado + "Linha: " + i + " <ConstString: " + lexer.lexema + ">\n";
                     break;
+
+                case Delimitador:
+                    resultado = resultado + "Linha: " + i + " <Delimitador: " + lexer.lexema + ">\n";
+                    break;
+
+                case Atribuicao:
+                    resultado = resultado + "Linha: " + i + " <Atribuicao: " + lexer.lexema + ">\n";
+                    break;
+                    
+                case SimboloAgrupador:
+                    resultado = resultado + "Linha: " + i + " <SimboloAgrupador: " + lexer.lexema + ">\n";
+                    break;                
+                    
+                case PalavraReservada:
+                    resultado = resultado + "Linha: " + i + " <PalavraReservada: " + lexer.lexema + ">\n";
+                    break;
                     
                 case NaoReconhecido:
                     resultado = resultado + "Linha: " + i + " <NaoReconhecido: " + lexer.lexema + ">\n";

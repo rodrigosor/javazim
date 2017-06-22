@@ -10,7 +10,7 @@ public class Main
 {
     public static void main(String[] args) 
     {
-        jflex.Main.generate(new File("C:\\Users\\11718582\\Documents\\NetBeansProjects\\javazim\\src\\javazim\\Lexer.flex"));
-        //Analisador.main(null);
+        // Inserir aqui o caminho para o arquivo FLEX
+        jflex.Main.generate(new File("D:\\GIT\\javazim\\src\\javazim\\Lexer.flex"));
     }
 }

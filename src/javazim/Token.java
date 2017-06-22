@@ -33,5 +33,9 @@ public enum Token
     ConstReal,
     ConstString,
     NaoReconhecido,
-    NovaLinha
+    NovaLinha,
+    PalavraReservada,
+    Delimitador,
+    SimboloAgrupador,
+    Atribuicao
 }
