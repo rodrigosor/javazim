@@ -22,7 +22,7 @@ PARAM = {TIPO}{ESPACO}+{ID}
 LISTA_PARAM = {PARAM}([, ]*{PARAM})*|{PARAM}
 DECLARACAO_VAR = {PARAM}({ESPACO}*";")
 OP = "||" | "&&" | "<" | "<=" | ">" | ">=" | "==" | "!=" | "/" | "*" | "-" | "+"
-OP_UNARIO = "-" | "!" 
+OP_UNARIO = "-" | "!"
 PALAVRA_RESERVADA = "public" | "class" | "return" | "static" | "void" | "main" | "if" | "else" | "while" | "print" | "println" | "true" | "false" | "new"
 DELIMITADOR = ";"
 SIMBOLO_AGRUPADOR = "(" | ")" | "[" | "]" | "{" | "}"
